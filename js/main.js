@@ -12,15 +12,7 @@
   window.addEventListener('load', function () { setTimeout(hidePre, 1500); });
   setTimeout(hidePre, 4000); // safety: never trap the user
 
-  /* Nav: glass on scroll */
-  var nav = document.querySelector('.nav');
-  function onScroll() {
-    if (!nav) return;
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-    nav.classList.toggle('transparent', window.scrollY <= 40);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  /* Nav: always white glass (brand style like jtckw.com) — no scroll toggle needed */
 
   /* Mobile menu */
   var burger = document.querySelector('.hamburger');
