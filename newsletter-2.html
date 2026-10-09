@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter – JTC</title>
+<meta name="description" content="Subscribe to the JTC Kuwait newsletter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.masonry{columns:3 280px;column-gap:1.2rem;margin-top:3rem}
+.g-item{break-inside:avoid;margin-bottom:1.2rem;border-radius:10px;overflow:hidden;cursor:zoom-in;position:relative;background:#eee}
+.g-item img{width:100%;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.g-item:hover img{transform:scale(1.06)}
+.lb{position:fixed;inset:0;z-index:2000;background:rgba(5,5,8,.93);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.35s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:92%;max-height:88vh;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb .x{position:absolute;top:1.2rem;right:1.8rem;color:#fff;font-size:2.4rem;cursor:pointer;background:none;border:none;line-height:1}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.6rem;margin-top:3rem}
+.news-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s;display:flex;flex-direction:column}
+.news-card:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(0,0,0,.14)}
+.news-card .thumb{height:210px;background-size:cover;background-position:center}
+.news-card .nbody{padding:1.5rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.news-date{display:inline-block;background:#e1251b;color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:4px;align-self:flex-start}
+.news-card h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;line-height:1.35}
+.news-card .rm{margin-top:auto;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#e1251b}
+.dl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.6rem;margin-top:3rem}
+.dl-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.dl-card:hover{transform:translateY(-8px)}
+.dl-card img{height:300px;width:100%;object-fit:cover;object-position:top}
+.dl-card .dbody{padding:1.4rem}
+.dl-card h3{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1rem;margin-bottom:1rem;min-height:3rem;display:flex;align-items:center;justify-content:center}
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.6rem;margin-top:3rem}
+.vid-card{background:#0b0b0d;border-radius:12px;overflow:hidden;color:#fff;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.vid-16x9{position:relative;padding-top:56.25%;background:#000}
+.vid-16x9 iframe,.vid-16x9 video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-card h3{padding:1.2rem 1.5rem;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1rem}
+.vid-card h3 i{color:#e1251b;font-style:normal;margin-right:.5rem}
+.arch{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
+.arch a{padding:.7rem 1.4rem;border:2px solid #ddd;border-radius:30px;font-weight:700;transition:.3s}
+.arch a:hover{border-color:#e1251b;background:#e1251b;color:#fff;transform:translateY(-2px)}
+.form-card{background:#fff;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.1);padding:2.5rem;max-width:640px;margin:3rem auto 0}
+.form-note{text-align:center;color:#6b6b6b;margin-top:1rem;font-size:.9rem}
+</style></head>
+<body>
+<div id="preloader"><div class="pre-logo"><img src="https://www.jtckw.com/wp-content/uploads/2021/06/logo-JTC-320x130.png" alt="JTC Kuwait"><div class="pre-bar"><span></span></div></div></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav transparent">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="https://www.jtckw.com/wp-content/uploads/2021/06/logo-JTC-320x130.png" alt="JTC Kuwait"></a>
+    <ul class="nav-links">
+      <li><a class="nl" href="index.html">Home</a></li>
+      <li class="has-dd"><a class="nl" href="about-us.html">About JTC</a>
+        <ul class="dropdown">
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="history.html">Our History</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="core-values.html">Core Values</a></li>
+          <li><a href="qhse.html">QHSE</a></li>
+          <li><a href="ethics-compliance.html">Ethics &amp; Compliance</a></li>
+          <li><a href="corporate-governance.html">Corporate Governance</a></li>
+          <li><a href="certifications-awards.html">Certifications &amp; Awards</a></li>
+        </ul>
+      </li>
+      <li class="has-dd"><a class="nl" href="services.html">Services</a>
+        <ul class="dropdown">
+          <li><a href="ports-management.html">Ports Management</a></li>
+          <li><a href="contract-logistics.html">Contract Logistics</a></li>
+          <li><a href="warehousing.html">Warehousing</a></li>
+          <li><a href="equipment-leasing.html">Equipment Leasing</a></li>
+          <li><a href="power-rental.html">Power Rental</a></li>
+        </ul>
+      </li>
+      <li><a class="nl" href="investor-relations.html">Investor Relations</a></li>
+      <li><a class="nl" href="gallery.html">Gallery</a></li>
+      <li><a class="nl" href="news-and-events.html">News &amp; Events</a></li>
+      <li class="has-dd"><a class="nl" href="career.html">Career</a>
+        <ul class="dropdown">
+          <li><a href="current-openings.html">Current Openings</a></li>
+          <li><a href="career.html">Apply Online</a></li>
+        </ul>
+      </li>
+      <li class="has-dd"><a class="nl" href="contact.html">Contact</a>
+        <ul class="dropdown">
+          <li><a href="contact.html">Contact Details</a></li>
+          <li><a href="complaint-form.html">Suggestions / Complaints</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="contact.html" class="btn btn-red nav-cta"><span>Get a Quote</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="bg" style="background-image:url('https://www.jtckw.com/wp-content/uploads/2021/06/port-management-banner.jpg')"></div>
+  <div class="container">
+    <span class="kicker reveal">JTC Kuwait</span>
+    <h1 class="reveal" data-d="1">News<span style="color:#e1251b">l</span>etter</h1>
+    <div class="crumbs reveal" data-d="2"><a href="index.html">Home</a> / <b>Newsletter</b></div>
+  </div>
+</section>
+<section class="sec sec-gray"><div class="container">
+    <div class="reveal" style="text-align:center"><span class="kicker" style="justify-content:center">Stay in the loop</span></div>
+    <h2 class="h2 reveal" data-d="1" style="text-align:center">Newsletter</h2>
+    <p class="lead reveal" data-d="2" style="text-align:center;margin:0 auto">Subscribe to the JTC newsletter for company updates, project highlights and announcements.</p>
+    <div class="form-card reveal" data-d="3">
+      <form id="nl-form">
+        <div class="field"><label for="nl-email">Email</label>
+        <input id="nl-email" type="email" name="ne" placeholder="you@example.com" required></div>
+        <div style="margin-top:1.2rem"><button type="submit" class="btn btn-red" style="width:100%"><span>Subscribe</span></button></div>
+      </form>
+      <p class="form-note" id="nl-ok" style="display:none;color:#1a7f37;font-weight:700">Thank you for subscribing to the JTC newsletter.</p>
+    </div>
+    </div></section>
+    <script>document.getElementById('nl-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('nl-ok').style.display='block';});</script>
+<!-- ================= BROCHURE CTA ================= -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="reveal">Download Our Brochures</h2>
+    <p class="reveal" data-d="1">Please fill the form to download the brochures.</p>
+    <div class="reveal" data-d="2"><a href="download-files.html" class="btn btn-dark"><span>Get Brochures</span></a></div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="https://www.jtckw.com/wp-content/uploads/2021/06/logo-JTC-320x130.png" alt="JTC">
+        <p>Over the past 45 years, JTC has grown to become a leading provider of Ports Management, Contract Logistics, Warehousing, Equipment Leasing, and Power Rental services across the GCC.</p>
+        <div class="foot-phones">
+          <div><b>Kuwait:</b> +965 2228 6100</div>
+          <div><b>KSA:</b> +966 539033398</div>
+          <div><b>Qatar:</b> +974 4412 7325</div>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="history.html">Our History</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="core-values.html">Core Values</a></li>
+          <li><a href="qhse.html">QHSE</a></li>
+          <li><a href="certifications-awards.html">Certifications &amp; Awards</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="ports-management.html">Ports Management</a></li>
+          <li><a href="contract-logistics.html">Contract Logistics</a></li>
+          <li><a href="warehousing.html">Warehousing</a></li>
+          <li><a href="equipment-leasing.html">Equipment Leasing</a></li>
+          <li><a href="power-rental.html">Power Rental</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="investor-relations.html">Investor Relations</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news-and-events.html">News &amp; Events</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="complaint-form.html">Suggestions / Complaints</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year">2026</span> JTC Kuwait. All rights reserved. | <a href="sitemap.html">Sitemap</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
