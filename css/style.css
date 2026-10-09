@@ -307,11 +307,16 @@ footer { background: #08080a; color: #cfcfcf; padding: 4.5rem 0 0; }
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .nav-links {
-    position: fixed; inset: var(--nav-h) 0 auto 0; background: var(--dark);
-    flex-direction: column; align-items: flex-start; padding: 1.5rem 6%;
-    gap: 0; max-height: 0; overflow: hidden; transition: max-height .45s var(--ease), padding .3s;
+    position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--dark);
+    flex-direction: column; align-items: stretch;
+    padding: 0 6%; gap: 0; max-height: 0; overflow: hidden; visibility: hidden;
+    transition: max-height .45s var(--ease), padding .35s var(--ease), visibility 0s .45s;
   }
-  .nav-links.open { max-height: 80vh; overflow-y: auto; }
+  .nav-links.open {
+    max-height: calc(100vh - var(--nav-h)); max-height: calc(100dvh - var(--nav-h));
+    padding: 1rem 6% 2rem; overflow-y: auto; visibility: visible;
+    transition: max-height .45s var(--ease), padding .35s var(--ease), visibility 0s 0s;
+  }
   .nav-links > li { width: 100%; border-bottom: 1px solid #1e1e22; }
   .nav-links a.nl { display: block; padding: 1rem 0; }
   .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: transparent; padding: 0 0 .6rem 1rem; min-width: 0; }
